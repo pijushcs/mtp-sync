@@ -22,6 +22,7 @@ To run the entire profiler, simply execute:
 #process_name is the process for which the threads are being profiled.
 
 To do things individually, check the following
+
 Compile the module using make and run the module with params:
 insmod pro_mod.ko pid_tmp=[#pid] timeX=[#duration]
 
