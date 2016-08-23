@@ -1,0 +1,32 @@
+CONTENTION PER CORE: 
+Cycles wasted per core by threads waiting to get hold of the write lock in the Linux Kernel
+[http://www.cse.iitb.ac.in/synerg/doku.php?id=public:students:pijush:read-write]
+====================================================================================
+
+Authors
+-------
+Name:  Pijush Chakraborty
+Email: pijush@cse.iitb.ac.in
+
+GENERAL
+=====================
+
+To study the level of contention, this test tries to find the no of cycles a writer wastes inorder to get hold of the lock. The datastructure used is the task_struct->thread_group linked list.
+
+The patch provided must be applied to kernel version 4.4.15 and compiled before continuing.
+
+To run the entire profiler, simply execute:
+./run_it.sh [#process_name] [#module_name] [#duration]
+
+#module_name should be a new name not in the directory.
+#process_name is the process for which the threads are being profiled.
+
+To do things individually, check the following
+Compile the module using make and run the module with params:
+insmod pro_mod.ko pid_tmp=[#pid] timeX=[#duration]
+
+The dmesg output can be taken as:
+dmesg | grep 'pro mod #pid' > tst_out
+
+The final contetnion should be calculated after compiling profileX.c
+./profileX.out [#duration] < tst_out
