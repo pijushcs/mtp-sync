@@ -35,7 +35,6 @@ void makeT(char *cX){
 		
 		getline(cin,str);
 		sscanf(str.c_str(),"[ %f] [pro mod %d] %s S%ld E%ld K%ld", &ignf, &pidX, typ, &s, &e, &k);
-
 	}
 
 	// Output: [#core] [#average cycles] [#max cycles]
