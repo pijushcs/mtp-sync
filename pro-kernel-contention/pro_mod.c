@@ -58,8 +58,10 @@ int init_module(void){
 	pro_mod_fset=0;
 
 	if(typex==1){
-		for(i=0;i<MAX_CPU;i++) pro_w+=pro_ins[i]+pro_del[i];
-		printk("[promod %d] IRCU: S%ld E%ld K%ld\n", pid_tmp, pro_read, pro_w, 1);
+		for(i=0;i<MAX_CPU;i++){
+			pro_w+=pro_ins[i]+pro_del[i]; pro_r+=pro_read[i];
+		}
+		printk("[promod %d] IRCU: S%ld E%ld K%ld\n", pid_tmp, pro_r, pro_w, 1);
 	}
 	else{
 		for(i=0;i<MAX_CPU;i++){
