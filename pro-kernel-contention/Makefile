@@ -1,4 +1,4 @@
-obj-m += pro4.o
+obj-m += pro_mod.o
 
 def:
 	make -C /lib/modules/$(shell uname -r)/build M=$(shell pwd) modules
