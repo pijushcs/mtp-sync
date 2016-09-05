@@ -1,6 +1,6 @@
-# run: process_name module_name duration
+# run: process_name module_name duration type
 
-make clean
+make clean > null 2> null
 pidNow=$(pgrep -x -o $1)
 varX=$2
 
@@ -13,8 +13,8 @@ clean:
 " > Makefile
  
 cp pro_mod.c $2.c
-make
-insmod $2.ko timeX=$3 pid_tmp=$pidNow 
+make 2> null > null
+insmod $2.ko pid_tmp=$pidNow timeX=$3 typex=$4 
 
 dmesg | grep "promod $pidNow" > tst_out
 g++ profileX.cpp
