@@ -33,6 +33,7 @@ int init_module(void){
 		for(i=0;i<20;i++){
 			pro_ins[i]=0;
 			pro_del[i]=0;
+			pro_read[i]=0;
 		}		
 
 		pro_mod_set=1;
