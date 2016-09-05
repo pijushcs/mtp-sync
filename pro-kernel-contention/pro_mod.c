@@ -9,7 +9,7 @@
 
 #define MAX_CPU 4
 //Extern Declarations
-extern int pro_mod_set, pro_mod_fset, pro_pid_set, pro_pid_fset, *pro_fread, *pro_fwrite, pro_read, *pro_ins, *pro_del;
+extern int pro_mod_set, pro_mod_fset, pro_pid_set, pro_pid_fset, *pro_fread, *pro_fwrite, *pro_read, *pro_ins, *pro_del;
 int pid_tmp,timeX,typex;
 
 // Module paramaters
@@ -28,6 +28,7 @@ int init_module(void){
 
 		pro_ins=(int*)kmalloc(20*sizeof(int), GFP_KERNEL);
 		pro_del=(int*)kmalloc(20*sizeof(int), GFP_KERNEL);
+		pro_read=(int*)kmalloc(20*sizeof(int), GFP_KERNEL);
 
 		for(i=0;i<20;i++){
 			pro_ins[i]=0;
