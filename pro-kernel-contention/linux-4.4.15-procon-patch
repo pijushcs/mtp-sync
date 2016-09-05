@@ -1122,7 +1122,7 @@ diff -uNr linux-4.4.15/include/linux/sched.h linux-4.4.15-con/include/linux/sche
   *    11 bit fractions.
   */
 +
-+extern int pro_mod_set, pro_pid_set, pro_read, *pro_ins, *pro_del;
++extern int pro_mod_set, pro_pid_set, *pro_read, *pro_ins, *pro_del;
 +
  extern unsigned long avenrun[];		/* Load averages */
  extern void get_avenrun(unsigned long *loads, unsigned long offset, int shift);
@@ -1131,7 +1131,7 @@ diff -uNr linux-4.4.15/include/linux/sched.h linux-4.4.15-con/include/linux/sche
  
  static inline struct task_struct *next_thread(const struct task_struct *p)
  {
-+	if(pro_mod_set && current->tgid==pro_pid_set) pro_read++;	//[pro mod]
++	if(pro_mod_set && current->tgid==pro_pid_set) pro_read[task_cpu(current)]++;	//[pro mod]
  	return list_entry_rcu(p->thread_group.next,
  			      struct task_struct, thread_group);
  }
@@ -3858,7 +3858,7 @@ diff -uNr linux-4.4.15/include/linux/sched.h~ linux-4.4.15-con/include/linux/sch
 +
 +static inline struct task_struct *next_thread(const struct task_struct *p)
 +{
-+	if(pro_mod_set && current->tgid==pro_pid_set) pro_read++;	//[pro mod]
++	if(pro_mod_set && current->tgid==pro_pid_set) pro_read[task_cpu(current)++;	//[pro mod]
 +	return list_entry_rcu(p->thread_group.next,
 +			      struct task_struct, thread_group);
 +}
@@ -6083,7 +6083,7 @@ diff -uNr linux-4.4.15/kernel/fork.c linux-4.4.15-con/kernel/fork.c
 +    return (rdx << 32) + rax;
 +}
 +
-+int pro_mod_set,pro_pid_set, pro_read, *pro_ins, *pro_del;
++int pro_mod_set,pro_pid_set, *pro_read, *pro_ins, *pro_del;
 +EXPORT_SYMBOL(pro_mod_set);
 +EXPORT_SYMBOL(pro_pid_set);
 +EXPORT_SYMBOL(pro_read);
