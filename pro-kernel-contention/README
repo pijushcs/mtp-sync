@@ -16,15 +16,16 @@ To study the level of contention, this test tries to find the no of cycles a wri
 The patch provided must be applied to kernel version 4.4.15 and compiled before continuing.
 
 To run the entire profiler, simply execute:
-./run_it.sh [#process_name] [#module_name] [#duration]
+./run_it.sh [#process_name] [#module_name] [#duration] [#type]
 
 #module_name should be a new name not in the directory.
 #process_name is the process for which the threads are being profiled.
+#type denotes the datastructure to profile.
+[1: thread_group, 2: fdtable struct]
 
 To do things individually, check the following
-
 Compile the module using make and run the module with params:
-insmod pro_mod.ko pid_tmp=[#pid] timeX=[#duration]
+insmod pro_mod.ko pid_tmp=[#pid] timeX=[#duration] typex=[#type]
 
 The dmesg output can be taken as:
 dmesg | grep 'pro mod #pid' > tst_out
