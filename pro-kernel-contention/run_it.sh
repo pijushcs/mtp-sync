@@ -1,7 +1,6 @@
-# run: process_name module_name duration type
+# run: process_name module_name duration type periodic-gap
 
 make clean > null 2> null
-pidNow=$(pgrep -x -o $1)
 varX=$2
 
 echo "obj-m += $varX.o
@@ -14,8 +13,21 @@ clean:
  
 cp pro_mod.c $2.c
 make 2> null > null
-insmod $2.ko pid_tmp=$pidNow timeX=$3 typex=$4 
 
-dmesg | grep "promod $pidNow" > tst_out
-g++ profileX.cpp
-./a.out $3 < tst_out
+#filebench -f oltp.f &
+pidNow=$(pgrep -x -o $1)
+
+g++ profileX.cpp -o profileX.out
+
+insmod $2.ko pid_tmp=$pidNow timeX=$3 typex=$4 & 
+#echo "" > coreData
+
+indX=0
+echo "starting"
+while [ $indX -lt $3 ]
+do
+	sleep $5
+	indX=$(( $indX + $5 ))
+	dmesg --read-clear | grep "promod $pidNow" > logX
+	./profileX.out $3 $indX < logX >> coreData
+done
