@@ -16,7 +16,7 @@ To study the level of contention, this test tries to find the no of cycles a wri
 The patch provided must be applied to kernel version 4.4.15 and compiled before continuing.
 
 To run the entire profiler, simply execute:
-./run_it.sh [#process_name] [#module_name] [#duration] [#type]
+./run_it.sh [#process_name] [#module_name] [#duration] [#type] [#periodic-gap]
 
 #module_name should be a new name not in the directory.
 #process_name is the process for which the threads are being profiled.
@@ -28,7 +28,9 @@ Compile the module using make and run the module with params:
 insmod pro_mod.ko pid_tmp=[#pid] timeX=[#duration] typex=[#type]
 
 The dmesg output can be taken as:
-dmesg | grep 'pro mod #pid' > tst_out
+dmesg | grep 'pro mod #pid' > logX
 
-The final contetnion should be calculated after compiling profileX.c
-./profileX.out [#duration] < tst_out
+The final contetnion data should be calculated after compiling profileX.c and executing:
+./profileX.out [#duration] [#cur-periodic-gap] < logX > plotData
+
+Now run 'gnuplot conPlot.plot' to visualize the data
