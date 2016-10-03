@@ -1,5 +1,6 @@
-BENCHMARKING RCU PROTECTED ARRAY: 
-====================================================================================
+UPDATED BENCHMARK: RCU PROTECTED ARRAY vs RCU PROTECTED LISTS
+
+======================================================================================
 
 Authors
 -------
@@ -9,22 +10,22 @@ Email: pijush@cse.iitb.ac.in
 GENERAL
 =====================
 
-To study the level of contention, this test tries to find the no of cycles a writer
-wastes inorder to get hold of the lock.
+To test the effect of using array based semantics rather than list based semantics for
+small node sizes, the benchamrk has been updated to include an RCU protected array. 
 
-To run the profiler, execute:
-./rcu_test.sh [#npages] [#buckets] [#wset] [#update rate] [#file rcu]
-./profileX.out [#type] < [#file rcu]  
+Note: The test results can be found inside 'TestRes' directory.
 
-Note: 
-#type: 'C' for RCU/ 'L' for RLU
-profileX.cpp must be compiled with g++
-
-Output: 
-[#core] [#avg wait %] [#max wait %]
-
-To run the entire tests, execute:
+To run all bench tests, execute:
 ./run_all.sh
-./newT.sh
 
-The original benchmark-code can be found here: https://github.com/rlu-sync/rlu
+To run the new bench tests, execute:
+./testX.sh [# therads] [# buckets] [# wset] [# update rate] [# file arcu] [# file rcu]
+
+For individual cases 
+./rcu_test.sh [# therads] [# buckets] [# wset] [# update rate] [# file rcu]
+./arcu_test.sh [# therads] [# buckets] [# wset] [# update rate] [# file arcu]
+
+To plot the data generated, execute:
+gnuplot plotX.plot [Note: plotX.plot must be edited for the perfect plot]
+
+The original benchmark can be found here: https://github.com/rlu-sync/rlu
