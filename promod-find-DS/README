@@ -1,0 +1,28 @@
+FIND MOST ACCESSED RCU-DS
+Find the most accessed/contented RCU protected DS in the linux kernel
+==========================================================================================================
+
+Authors
+-------
+Name:  Pijush Chakraborty
+Email: pijush@cse.iitb.ac.in
+
+GENERAL
+=====================
+The list of such DS can be found in 'DS_accessed' sorted on basis of access rate.
+
+The patch provided must be applied to kernel version 4.4.15 and compiled before continuing.
+The system when started with the new kernel logs every access to all RCU lists.
+
+To kernel is updated using the following script:
+./promod_add.sh from the linux source with promod_add.awk on the same directory.
+
+This script browses the entire kernel source for files and add logging statements before 
+RCU list statements using 'promod_add.awk'. This is done to find the most accessed 
+RCU-list DS in the Linux Kernel. 
+
+On the system with the new kernel, simply execute:
+dmesg --read-clear > log
+./promod_DS.out < log > DS_accessed
+
+This gives the list of RCU DS accessed in the kernel just before the above execution.
