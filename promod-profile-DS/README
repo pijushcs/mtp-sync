@@ -1,0 +1,37 @@
+CONTENTION PER CORE: 
+Cycles wasted per core by threads waiting to get hold of a lock on a RCU global list in the Linux Kernel
+==========================================================================================================
+
+Authors
+-------
+Name:  Pijush Chakraborty
+Email: pijush@cse.iitb.ac.in
+
+GENERAL
+=====================
+
+To study the level of contention, this test tries to find the no of cycles a writer wastes inorder to get hold of the lock.
+The datastructure used is the tfile->f_ep_links linked list under the fs subsystem. 
+The system was running at a fixed frequency of 2800MHz.
+
+The result can be seen at: 'pro-con.png'
+
+The patch provided must be applied to kernel version 4.4.15 and compiled before continuing.
+promod_define.h has been added to easily add profiling hooks in the kernel.
+
+To run the entire profiler, simply execute:
+./main.sh [#duration] [#periodic-gap]
+
+To do things individually, check the following
+
+The dmesg output can be taken as:
+dmesg | grep 'promod #type' > logX
+
+Note: #type is the DS id to be profiled
+
+The final contetnion data should be calculated after compiling profileX.c and executing:
+./profileX.out [#cur-periodic-gap] < logX > plotData
+
+Note: #cur-gap can be 1 for individual output
+
+Now run 'gnuplot conPlot.plot' to visualize the data
