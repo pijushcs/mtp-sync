@@ -1,0 +1,9 @@
+DS COUNT [BASED ON LIST SEMANTICS]
+====================================
+
+Simply execute ./main.sh and get the DS count(subdivided by semantics)
+
+Note:
+findRCU.c removes duplicate list entries.
+'log' contains all *_rcu entries in the linux kernel v4.4
+The log has been taken from http://www.rdrop.com/~paulmck/RCU/linuxusage/linux-4.4.rcua
