@@ -1,0 +1,143 @@
+arch/x86/kernel/nmi.c __register_nmi_handler 179 list_add_tail_rcu(&action->list, &desc->head);
+arch/x86/pci/mmconfig-shared.c list_add_sorted 60 list_add_tail_rcu(&new->list, &cfg->list);
+arch/x86/pci/mmconfig-shared.c list_add_sorted 64 list_add_tail_rcu(&new->list, &pci_mmcfg_list);
+drivers/acpi/osl.c acpi_os_map_iomem 412 list_add_tail_rcu(&map->list, &acpi_ioremaps);
+drivers/block/drbd/drbd_main.c drbd_create_resource 2594 list_add_tail_rcu(&resource->resources, &drbd_resources);
+drivers/block/drbd/drbd_main.c conn_create 2666 list_add_tail_rcu(&connection->connections, &resource->connections);
+drivers/char/ipmi/ipmi_msghandler.c ipmi_register_smi 2857 list_add_tail_rcu(&intf->link, link);
+drivers/char/tpm/tpm-chip.c tpm_chip_register 231 list_add_tail_rcu(&chip->list, &tpm_chip_list);
+drivers/dma/dmaengine.c dma_async_device_register 942 list_add_tail_rcu(&device->global_node, &dma_device_list);
+drivers/dma/sh/shdmac.c sh_dmae_probe 792 list_add_tail_rcu(&shdev->node, &sh_dmae_devices);
+drivers/edac/edac_device.c add_edac_dev_to_global_list 321 list_add_tail_rcu(&edac_dev->link, insert_before);
+drivers/edac/edac_mc.c add_mc_to_global_list 658 list_add_tail_rcu(&mci->link, insert_before);
+drivers/edac/edac_pci.c add_edac_pci_to_global_list 147 list_add_tail_rcu(&pci->link, insert_before);
+drivers/firewire/core-transaction.c fw_core_add_address_handler 593 list_add_tail_rcu(&handler->link, &address_handler_list);
+drivers/infiniband/hw/qib/qib_verbs_mcast.c qib_mcast_add 194 list_add_tail_rcu(&mqp->list, &tmcast->qp_list);
+drivers/infiniband/hw/qib/qib_verbs_mcast.c qib_mcast_add 211 list_add_tail_rcu(&mqp->list, &mcast->qp_list);
+drivers/input/evdev.c evdev_attach_client 406 list_add_tail_rcu(&client->node, &evdev->client_list);
+drivers/input/input.c input_register_handle 2324 list_add_tail_rcu(&handle->d_node, &dev->h_list);
+drivers/input/input.c input_register_handle 2334 list_add_tail_rcu(&handle->h_node, &handler->h_list);
+drivers/input/joydev.c joydev_attach_client 178 list_add_tail_rcu(&client->node, &joydev->client_list);
+drivers/input/mousedev.c mousedev_attach_client 510 list_add_tail_rcu(&client->node, &mousedev->client_list);
+drivers/iommu/dmar.c dmar_register_drhd_unit 85 list_add_tail_rcu(&drhd->list, &dmar_drhd_units);
+drivers/md/dm-stats.c dmar_register_drhd_unit 380 list_add_tail_rcu(&s->list_entry, l);
+drivers/md/dm-thin.c thin_ctr 4062 list_add_tail_rcu(&tc->list, &tc->pool->active_thins);
+drivers/misc/vmw_vmci/vmci_context.c vmci_ctx_create 171 list_add_tail_rcu(&context->list_item, &ctx_list.head);
+drivers/misc/vmw_vmci/vmci_context.c vmci_ctx_add_notification 644 list_add_tail_rcu(&notifier->node, &context->notifier_list);
+drivers/net/ethernet/chelsio/cxgb4/cxgb4_main.c attach_ulds 2505 list_add_tail_rcu(&adap->rcu_node, &adap_rcu_list);
+drivers/net/ethernet/hisilicon/hns/hnae.c hnae_list_add 27 list_add_tail_rcu(node, head);
+drivers/net/ethernet/sun/sunvnet.c vnet_port_probe 1981 list_add_tail_rcu(&port->list, &vp->port_list);
+drivers/net/ipvlan/ipvlan_main.c ipvlan_link_new 490 list_add_tail_rcu(&ipvlan->pnode, &port->ipvlans);
+drivers/net/macvlan.c macvlan_common_newlink 1324 list_add_tail_rcu(&vlan->list, &port->vlans);
+drivers/net/team/team.c __team_queue_override_port_add 840 list_add_tail_rcu(&port->qom_list, node);
+drivers/net/team/team.c team_port_add 1212 list_add_tail_rcu(&port->list, &team->port_list);
+drivers/net/vxlan.c vxlan_fdb_append 509 list_add_tail_rcu(&rd->list, &f->remotes);
+drivers/net/wireless/ath/carl9170/main.c carl9170_op_add_interface 702 list_add_tail_rcu(&vif_priv->list, &ar->vif_list);
+drivers/net/wireless/ath/carl9170/main.c carl9170_op_ampdu_action 1451 list_add_tail_rcu(&tid_info->list, &ar->tx_ampdu_list);
+drivers/net/wireless/ath/carl9170/tx.c carl9170_bar_check 1330 list_add_tail_rcu(&entry->list, &ar->bar_list[queue]);
+drivers/net/wireless/rt2x00/rt2x00queue.c rt2x00queue_bar_check 605 list_add_tail_rcu(&bar_entry->list, &rt2x00dev->bar_list);
+drivers/net/xen-netback/netback.c xenvif_mcast_add 1231 list_add_tail_rcu(&mcast->entry, &vif->fe_mcast_addr);
+drivers/scsi/cxgbi/libcxgbi.c cxgbi_device_register 153 list_add_tail_rcu(&cdev->rcu_node, &cdev_rcu_list);
+drivers/soc/ti/knav_qmss_queue.c __knav_queue_open 246 list_add_tail_rcu(&qh->list, &inst->handles);
+drivers/staging/rdma/hfi1/verbs_mcast.c mcast_add 211 list_add_tail_rcu(&mqp->list, &tmcast->qp_list);
+drivers/staging/rdma/hfi1/verbs_mcast.c mcast_add 228 list_add_tail_rcu(&mqp->list, &mcast->qp_list);
+drivers/staging/rdma/ipath/ipath_verbs_mcast.c ipath_mcast_add 204 list_add_tail_rcu(&mqp->list, &tmcast->qp_list);
+drivers/staging/rdma/ipath/ipath_verbs_mcast.c ipath_mcast_add 221 list_add_tail_rcu(&mqp->list, &mcast->qp_list);
+fs/eventpoll.c ep_insert 1320 list_add_tail_rcu(&epi->fllink, &tfile->f_ep_links);
+fs/ext4/mballoc.c ext4_mb_add_n_trim 4322 list_add_tail_rcu(&pa->pa_inode_list,
+fs/ext4/mballoc.c ext4_mb_add_n_trim 4334 list_add_tail_rcu(&pa->pa_inode_list,
+fs/nfs/client.c nfs_server_insert_lists 841 list_add_tail_rcu(&server->client_link, &clp->cl_superblocks);
+fs/nfs/delegation.c nfs_inode_set_delegation 382 list_add_tail_rcu(&delegation->super_list, &server->delegations);
+fs/nfsd/nfs4layouts.c nfsd4_alloc_devid_map 78 list_add_tail_rcu(&map->hash, &nfsd_devid_hash[devid_hashfn(map->idx)]);
+include/linux/lsm_hooks.h security_add_hooks 1856 list_add_tail_rcu(&hooks[i].list, hooks[i].head);
+kernel/auditfilter.c audit_add_rule 966 list_add_tail_rcu(&entry->list, list);
+kernel/cgroup.c create_css 4873 list_add_tail_rcu(&css->sibling, &parent_css->children);
+kernel/cgroup.c cgroup_mkdir 4971 list_add_tail_rcu(&cgrp->self.sibling, &cgroup_parent(cgrp)->self.children);
+kernel/fork.c copy_process 1589 list_add_tail_rcu(&p->tasks, &init_task.tasks);
+kernel/fork.c copy_process 1597 list_add_tail_rcu(&p->thread_group,
+kernel/fork.c copy_process 1599 list_add_tail_rcu(&p->thread_node,
+kernel/kprobes.c add_new_kprobe 1217 list_add_tail_rcu(&p->list, &ap->list);
+kernel/locking/lockdep.c register_lock_class 808 list_add_tail_rcu(&class->hash_entry, hash_head);
+kernel/locking/lockdep.c register_lock_class 812 list_add_tail_rcu(&class->lock_entry, &all_lock_classes);
+kernel/locking/lockdep.c add_lock_to_list 888 list_add_tail_rcu(&entry->entry, head);
+kernel/locking/lockdep.c lookup_chain_cache 2094 list_add_tail_rcu(&chain->entry, hash_head);
+kernel/printk/printk.c kmsg_dump_register 2790 list_add_tail_rcu(&dumper->list, &dump_list);
+kernel/sched/fair.c list_add_leaf_cfs_rq 300 list_add_tail_rcu(&cfs_rq->leaf_cfs_rq_list,
+kernel/trace/trace_kprobe.c enable_trace_kprobe 364 list_add_tail_rcu(&link->list, &tk->tp.files);
+kernel/trace/trace_uprobe.c probe_event_enable 915 list_add_tail_rcu(&link->list, &tu->tp.files);
+kernel/workqueue.c __alloc_workqueue_key 3878 list_add_tail_rcu(&wq->list, &workqueues);
+lib/textsearch.c textsearch_register 156 list_add_tail_rcu(&ops->list, &ts_ops);
+mm/backing-dev.c cgwb_create 582 list_add_tail_rcu(&wb->bdi_node, &bdi->wb_list);
+mm/backing-dev.c bdi_init 787 list_add_tail_rcu(&bdi->wb.bdi_node, &bdi->wb_list);
+mm/backing-dev.c bdi_register 814 list_add_tail_rcu(&bdi->bdi_list, &bdi_list);
+mm/kmemleak.c create_object 616 list_add_tail_rcu(&object->object_list, &object_list);
+mm/vmalloc.c new_vmap_block 869 list_add_tail_rcu(&vb->free_list, &vbq->free);
+mm/zswap.c __zswap_param_set 751 list_add_tail_rcu(&pool->list, &zswap_pools);
+net/batman-adv/hard-interface.c batadv_hardif_add_interface 652 list_add_tail_rcu(&hard_iface->list, &batadv_hardif_list);
+net/batman-adv/network-coding.c batadv_nc_get_nc_node 868 list_add_tail_rcu(&nc_node->list, list);
+net/core/dev_addr_lists.c __hw_addr_create_ex 43 list_add_tail_rcu(&ha->list, &list->list);
+net/core/dev.c list_netdevice 229 list_add_tail_rcu(&dev->dev_list, &net->dev_base_head);
+net/core/dev.c __netdev_adjacent_dev_insert 5224 list_add_tail_rcu(&adj->list, dev_list);
+net/core/fib_rules.c __fib_rules_register 119 list_add_tail_rcu(&ops->list, &net->rules_ops);
+net/core/net_namespace.c copy_net_ns 370 list_add_tail_rcu(&net->list, &net_namespace_list);
+net/core/net_namespace.c net_ns_init 754 list_add_tail_rcu(&init_net.list, &net_namespace_list);
+net/hsr/hsr_framereg.c hsr_create_self_node 121 list_add_tail_rcu(&node->mac_list, self_node_db);
+net/hsr/hsr_framereg.c hsr_add_node 154 list_add_tail_rcu(&node->mac_list, node_db);
+net/hsr/hsr_slave.c hsr_add_port 160 list_add_tail_rcu(&port->port_list, &hsr->ports);
+net/ipv4/cipso_ipv4.c cipso_v4_doi_add 510 list_add_tail_rcu(&doi_def->list, &cipso_v4_doi_list);
+net/ipv4/ipmr.c ipmr_new_table 345 list_add_tail_rcu(&mrt->list, &net->ipv4.mr_tables);
+net/ipv4/tcp_cong.c tcp_register_congestion_control 85 list_add_tail_rcu(&ca->list, &tcp_cong_list);
+net/ipv6/ip6mr.c ip6mr_new_table 329 list_add_tail_rcu(&mrt->list, &net->ipv6.mr6_tables);
+net/llc/llc_core.c ip6mr_new_table 107 list_add_tail_rcu(&sap->node, &llc_sap_list);
+net/mac80211/iface.c ieee80211_if_add 1842 list_add_tail_rcu(&sdata->list, &local->interfaces);
+net/mac80211/sta_info.c __acquires 508 list_add_tail_rcu(&sta->list, &local->sta_list);
+net/mac802154/iface.c ieee802154_if_add 683 list_add_tail_rcu(&sdata->list, &local->interfaces);
+net/mac802154/llsec.c mac802154_llsec_dev_add 384 list_add_tail_rcu(&entry->dev.list, &sec->table.devices);
+net/mac802154/llsec.c mac802154_llsec_devkey_add 447 list_add_tail_rcu(&devkey->devkey.list, &dev->dev.keys);
+net/mac802154/llsec.c mac802154_llsec_seclevel_add 507 list_add_tail_rcu(&entry->level.list, &sec->table.security_levels);
+net/netfilter/ipset/ip_set_list_set.c list_set_uadd 309 list_add_tail_rcu(&e->list, &next->list);
+net/netfilter/ipset/ip_set_list_set.c list_set_uadd 313 list_add_tail_rcu(&e->list, &map->members);
+net/netfilter/nfnetlink_acct.c nfnl_acct_new 126 list_add_tail_rcu(&nfacct->head, &net->nfnl_acct_list);
+net/netfilter/nfnetlink_cttimeout.c cttimeout_new_timeout 148 list_add_tail_rcu(&timeout->head, &cttimeout_list);
+net/netfilter/nf_tables_api.c nft_register_afinfo 38 list_add_tail_rcu(&afi->list, &net->nft.af_info);
+net/netfilter/nf_tables_api.c nf_tables_newtable 738 list_add_tail_rcu(&table->list, &afi->tables);
+net/netfilter/nf_tables_api.c nf_tables_newchain 1468 list_add_tail_rcu(&chain->list, &table->chains);
+net/netfilter/nf_tables_api.c nft_register_expr 1526 list_add_tail_rcu(&type->list, &nf_tables_expressions);
+net/netfilter/nf_tables_api.c nf_tables_newrule 2139 list_add_tail_rcu(&rule->list, &old_rule->list);
+net/netfilter/nf_tables_api.c nf_tables_newrule 2148 list_add_tail_rcu(&rule->list, &chain->rules);
+net/netfilter/nf_tables_api.c nf_tables_newrule 2151 list_add_tail_rcu(&rule->list, &old_rule->list);
+net/netfilter/nf_tables_api.c nft_register_set 2237 list_add_tail_rcu(&ops->list, &nf_tables_set_ops);
+net/netfilter/nf_tables_api.c nf_tables_newset 2854 list_add_tail_rcu(&set->list, &table->sets);
+net/netfilter/nf_tables_api.c nf_tables_bind_set 2958 list_add_tail_rcu(&binding->list, &set->bindings);
+net/netfilter/nf_tables_api.c nf_tables_abort 4043 list_add_tail_rcu(&trans->ctx.table->list,
+net/netfilter/nf_tables_api.c nf_tables_abort 4062 list_add_tail_rcu(&trans->ctx.chain->list,
+net/netfilter/nf_tables_api.c nf_tables_abort 4081 list_add_tail_rcu(&nft_trans_set(trans)->list,
+net/netfilter/xt_osf.c xt_osf_add_callback 102 list_add_tail_rcu(&kf->finger_entry, &xt_osf_fingers[!!f->df]);
+net/netlabel/netlabel_addrlist.c netlbl_af4list_add 183 list_add_tail_rcu(&entry->list, head);
+net/netlabel/netlabel_addrlist.c netlbl_af6list_add 221 list_add_tail_rcu(&entry->list, head);
+net/netlabel/netlabel_domainhash.c netlbl_domhsh_add 396 list_add_tail_rcu(&entry->list,
+net/netlabel/netlabel_unlabeled.c netlbl_unlhsh_add_iface 350 list_add_tail_rcu(&iface->list,
+net/openvswitch/datapath.c ovs_dp_cmd_new 1610 list_add_tail_rcu(&dp->list_node, &ovs_net->dps);
+net/rds/ib.c rds_ib_add_one 194 list_add_tail_rcu(&rds_ibdev->list, &rds_ib_devices);
+net/rds/ib_rdma.c rds_ib_add_ipaddr 141 list_add_tail_rcu(&i_ipaddr->list, &rds_ibdev->ipaddr_list);
+net/sched/cls_flow.c flow_change 535 list_add_tail_rcu(&fnew->list, &head->filters);
+net/sched/cls_flower.c fl_change 506 list_add_tail_rcu(&fnew->list, &head->filters);
+net/sched/sch_api.c qdisc_list_add 282 list_add_tail_rcu(&q->list, &root->list);
+net/sctp/associola.c sctp_assoc_add_peer 700 list_add_tail_rcu(&peer->transports, &asoc->peer.transport_addr_list);
+net/sctp/bind_addr.c sctp_add_bind_addr 178 list_add_tail_rcu(&addr->list, &bp->address_list);
+net/sctp/ipv6.c sctp_inet6addr_event 108 list_add_tail_rcu(&addr->list, &net->sctp.local_addr_list);
+net/sctp/protocol.c sctp_inetaddr_event 785 list_add_tail_rcu(&addr->list, &net->sctp.local_addr_list);
+net/tipc/name_distr.c tipc_named_publish 121 list_add_tail_rcu(&publ->local_list,
+net/tipc/node.c tipc_node_create 176 list_add_tail_rcu(&n_ptr->list, &temp_node->list);
+net/xfrm/xfrm_state.c xfrm_register_km 1886 list_add_tail_rcu(&km->list, &xfrm_km_list);
+security/device_cgroup.c dev_exception_add 118 list_add_tail_rcu(&excopy->list, &dev_cgroup->exceptions);
+security/integrity/ima/ima_queue.c ima_add_digest_entry 84 list_add_tail_rcu(&qe->later, &ima_measurements);
+security/tomoyo/common.c tomoyo_init_policy_namespace 354 list_add_tail_rcu(&ns->namespace_list, &tomoyo_namespace_list);
+security/tomoyo/domain.c bool 53 list_add_tail_rcu(&entry->list, list);
+security/tomoyo/domain.c bool 136 list_add_tail_rcu(&entry->list, list);
+security/tomoyo/domain.c tomoyo_assign_domain 559 list_add_tail_rcu(&entry->list, &tomoyo_domain_list);
+security/tomoyo/memory.c tomoyo_get_group 121 list_add_tail_rcu(&entry->head.list, list);
+security/tomoyo/memory.c tomoyo_mm_init 200 list_add_tail_rcu(&tomoyo_kernel_domain.list, &tomoyo_domain_list);
+tools/lib/lockdep/uinclude/linux/kernel.h <global> 30 #define list_add_tail_rcu list_add_tail
+virt/kvm/arm/vgic.c kvm_vgic_map_phys_irq 1773 list_add_tail_rcu(&entry->entry, root);
+END

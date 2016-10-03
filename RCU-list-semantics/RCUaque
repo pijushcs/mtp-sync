@@ -1,0 +1,11 @@
+drivers/net/team/team.c __team_queue_override_port_add 840 list_add_tail_rcu(&port->qom_list, node);
+drivers/net/wireless/ath/carl9170/tx.c carl9170_bar_check 1330 list_add_tail_rcu(&entry->list, &ar->bar_list[queue]);
+drivers/net/wireless/rt2x00/rt2x00queue.c rt2x00queue_bar_check 605 list_add_tail_rcu(&bar_entry->list, &rt2x00dev->bar_list);
+drivers/s390/cio/qdio_thinint.c tiqdio_add_input_queues 81 list_add_rcu(&irq_ptr->input_qs[0]->entry, &tiq_list);
+drivers/soc/ti/knav_qmss_queue.c __knav_queue_open 246 list_add_tail_rcu(&qh->list, &inst->handles);
+kernel/workqueue.c link_pwq 3379 list_add_rcu(&pwq->pwqs_node, &wq->pwqs);
+kernel/workqueue.c __alloc_workqueue_key 3878 list_add_tail_rcu(&wq->list, &workqueues);
+net/netfilter/nfnetlink_queue.c instance_create 145 hlist_add_head_rcu(&inst->hlist, &q->instance_table[h]);
+security/integrity/ima/ima_queue.c ima_add_digest_entry 84 list_add_tail_rcu(&qe->later, &ima_measurements);
+security/integrity/ima/ima_queue.c ima_add_digest_entry 88 hlist_add_head_rcu(&qe->hnext, &ima_htable.queue[key]);
+END

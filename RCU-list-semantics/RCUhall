@@ -1,0 +1,119 @@
+arch/powerpc/kvm/book3s_mmu_hpte.c kvmppc_mmu_hpte_cache_map 78 hlist_add_head_rcu(&pte->list_pte, &vcpu3s->hpte_hash_pte[index]);
+arch/powerpc/kvm/book3s_mmu_hpte.c kvmppc_mmu_hpte_cache_map 82 hlist_add_head_rcu(&pte->list_pte_long,
+arch/powerpc/kvm/book3s_mmu_hpte.c kvmppc_mmu_hpte_cache_map 87 hlist_add_head_rcu(&pte->list_vpte, &vcpu3s->hpte_hash_vpte[index]);
+arch/powerpc/kvm/book3s_mmu_hpte.c kvmppc_mmu_hpte_cache_map 91 hlist_add_head_rcu(&pte->list_vpte_long,
+arch/powerpc/kvm/book3s_mmu_hpte.c kvmppc_mmu_hpte_cache_map 97 hlist_add_head_rcu(&pte->list_vpte_64k,
+arch/s390/kernel/irq.c register_external_irq 225 hlist_add_head_rcu(&p->entry, &ext_int_hash[index]);
+arch/x86/kvm/irq_comm.c kvm_register_irq_mask_notifier 194 hlist_add_head_rcu(&kimn->link, &kvm->arch.mask_notifier_list);
+block/blk-cgroup.c blkg_create 227 hlist_add_head_rcu(&blkg->blkcg_node, &blkcg->blkg_list);
+drivers/gpu/drm/drm_hashtab.c drm_ht_insert_item 128 hlist_add_behind_rcu(&item->head, parent);
+drivers/gpu/drm/drm_hashtab.c drm_ht_insert_item 130 hlist_add_head_rcu(&item->head, h_list);
+drivers/md/bcache/btree.c mca_alloc 932 hlist_add_head_rcu(&b->hash, mca_hash(c, k));
+drivers/misc/vmw_vmci/vmci_resource.c vmci_resource_add 134 hlist_add_head_rcu(&resource->node, &vmci_resource_table.entries[idx]);
+drivers/net/ethernet/broadcom/bnxt/bnxt.c bnxt_rx_flow_steer 5398 hlist_add_head_rcu(&new_fltr->hash, head);
+drivers/net/ethernet/mellanox/mlx4/en_netdev.c mlx4_en_replace_mac 654 hlist_add_head_rcu(&entry->hlist,
+drivers/net/ethernet/mellanox/mlx4/en_netdev.c mlx4_en_do_uc_filter 1151 hlist_add_head_rcu(&entry->hlist, bucket);
+drivers/net/ethernet/mellanox/mlx4/en_netdev.c mlx4_en_set_rss_steer_rules 1250 hlist_add_head_rcu(&entry->hlist,
+drivers/net/ethernet/sun/sunvnet.c vnet_port_probe 1982 hlist_add_head_rcu(&port->hash,
+drivers/net/geneve.c geneve_sock_add 592 hlist_add_head_rcu(&geneve->hlist, &gs->vni_list[hash]);
+drivers/net/ipvlan/ipvlan_core.c ipvlan_ht_addr_add 85 hlist_add_head_rcu(&addr->hlnode, &port->hlhead[hash]);
+drivers/net/macvlan.c macvlan_hash_add_source 142 hlist_add_head_rcu(&entry->hlist, h);
+drivers/net/macvlan.c macvlan_hash_add 154 hlist_add_head_rcu(&vlan->hlist, &port->vlan_hash[idx]);
+drivers/net/team/team.c team_port_enable 927 hlist_add_head_rcu(&port->hlist,
+drivers/net/team/team.c __reconstruct_port_hlist 946 hlist_add_head_rcu(&port->hlist,
+drivers/net/tun.c tun_flow_create 303 hlist_add_head_rcu(&e->hash_link, head);
+drivers/net/vxlan.c vxlan_fdb_create 734 hlist_add_head_rcu(&f->hlist,
+drivers/net/vxlan.c vxlan_vs_add_dev 2259 hlist_add_head_rcu(&vxlan->hlist, vni_head(vs, vni));
+drivers/net/vxlan.c vxlan_socket_create 2686 hlist_add_head_rcu(&vs->hlist, vs_head(net, port));
+drivers/s390/cio/airq.c register_adapter_interrupt 53 hlist_add_head_rcu(&airq->list, &airq_lists[airq->isc]);
+drivers/target/target_core_device.c core_enable_device_list_for_node 370 hlist_add_head_rcu(&new->link, &nacl->lun_entry_hlist);
+drivers/target/target_core_device.c core_enable_device_list_for_node 388 hlist_add_head_rcu(&new->link, &nacl->lun_entry_hlist);
+drivers/target/target_core_tpg.c core_tpg_add_lun 676 hlist_add_head_rcu(&lun->link, &tpg->tpg_lun_hlist);
+drivers/target/tcm_fc/tfc_sess.c ft_sess_create 219 hlist_add_head_rcu(&sess->hash, head);
+fs/namespace.c attach_mnt 866 hlist_add_head_rcu(&mnt->mnt_hash, m_hash(&parent->mnt, mp->m_dentry));
+fs/namespace.c attach_shadowed 875 hlist_add_behind_rcu(&mnt->mnt_hash, &shadows->mnt_hash);
+fs/namespace.c attach_shadowed 878 hlist_add_head_rcu(&mnt->mnt_hash,
+fs/nfsd/nfs4state.c nfsd4_init_file 3261 hlist_add_head_rcu(&fp->fi_hash, &file_hashtbl[hashval]);
+fs/nfs/pnfs_dev.c nfs4_find_get_deviceid 209 hlist_add_head_rcu(&new->node, &nfs4_deviceid_cache[hash]);
+fs/notify/mark.c fsnotify_add_mark_list 305 hlist_add_head_rcu(&mark->obj_list, head);
+fs/notify/mark.c fsnotify_add_mark_list 318 hlist_add_before_rcu(&mark->obj_list, &lmark->obj_list);
+fs/notify/mark.c fsnotify_add_mark_list 325 hlist_add_behind_rcu(&mark->obj_list, &last->obj_list);
+include/linux/hashtable.h hash_add_rcu 65 hlist_add_head_rcu(node, &hashtable[hash_min(key, HASH_BITS(hashtable))])
+include/net/sock.h sk_add_node_rcu 647 hlist_add_head_rcu(&sk->sk_node, list);
+kernel/bpf/hashtab.c htab_map_update_elem 282 hlist_add_head_rcu(&l_new->hash_node, head);
+kernel/events/core.c perf_swevent_add 6751 hlist_add_head_rcu(&event->hlist_entry, head);
+kernel/kprobes.c register_kprobe 1523 hlist_add_head_rcu(&p->hlist,
+kernel/pid.c alloc_pid 339 hlist_add_head_rcu(&upid->pid_chain,
+kernel/pid.c attach_pid 392 hlist_add_head_rcu(&link->node, &link->pid->tasks[type]);
+kernel/time/posix-timers.c posix_timer_add 187 hlist_add_head_rcu(&timer->t_hash, head);
+kernel/trace/ftrace.c ftrace_add_profile 832 hlist_add_head_rcu(&rec->node, &stat->hash[key]);
+kernel/trace/ftrace.c register_ftrace_function_probe 3792 hlist_add_head_rcu(&entry->node, &ftrace_func_hash[key]);
+kernel/trace/trace_event_perf.c perf_trace_add 251 hlist_add_head_rcu(&p_event->hlist_entry, list);
+net/batman-adv/gateway_client.c batadv_gw_node_add 442 hlist_add_head_rcu(&gw_node->list, &bat_priv->gw.list);
+net/batman-adv/hash.h batadv_hash_add 132 hlist_add_head_rcu(data_node, head);
+net/batman-adv/main.c batadv_hash_add 1101 hlist_add_head_rcu(&tvlv_handler->list, &bat_priv->tvlv.handler_list);
+net/batman-adv/multicast.c batadv_mcast_want_unsnoop_update 623 hlist_add_head_rcu(node, head);
+net/batman-adv/multicast.c batadv_mcast_want_ipv4_update 668 hlist_add_head_rcu(node, head);
+net/batman-adv/multicast.c batadv_mcast_want_ipv6_update 713 hlist_add_head_rcu(node, head);
+net/batman-adv/originator.c batadv_orig_node_vlan_new 122 hlist_add_head_rcu(&vlan->list, &orig_node->vlan_list);
+net/batman-adv/originator.c batadv_orig_ifinfo_new 360 hlist_add_head_rcu(&orig_ifinfo->list,
+net/batman-adv/originator.c batadv_neigh_ifinfo_new 437 hlist_add_head_rcu(&neigh_ifinfo->list, &neigh->ifinfo_list);
+net/batman-adv/originator.c batadv_neigh_node_new 523 hlist_add_head_rcu(&neigh_node->list, &orig_node->neigh_list);
+net/batman-adv/soft-interface.c batadv_softif_create_vlan 563 hlist_add_head_rcu(&vlan->list, &bat_priv->softif_vlan_list);
+net/batman-adv/translation-table.c batadv_tt_global_orig_entry_add 1319 hlist_add_head_rcu(&orig_entry->list,
+net/bridge/br_fdb.c fdb_create 514 hlist_add_head_rcu(&fdb->hlist, head);
+net/bridge/br_multicast.c br_multicast_new_group 641 hlist_add_head_rcu(&mp->hlist[mdb->ver], &mdb->mhash[hash]);
+net/bridge/br_multicast.c br_multicast_add_router 1219 hlist_add_behind_rcu(&port->rlist, slot);
+net/bridge/br_multicast.c br_multicast_add_router 1221 hlist_add_head_rcu(&port->rlist, &br->router_list);
+net/can/af_can.c br_multicast_add_router 500 hlist_add_head_rcu(&r->list, rl);
+net/can/gw.c cgw_create_job 902 hlist_add_head_rcu(&gwj->list, &cgw_list);
+net/core/dev.c list_netdevice 230 hlist_add_head_rcu(&dev->name_hlist, dev_name_hash(net, dev->name));
+net/core/dev.c list_netdevice 231 hlist_add_head_rcu(&dev->index_hlist,
+net/core/dev.c dev_change_name 1197 hlist_add_head_rcu(&dev->name_hlist, dev_name_hash(net, dev->name));
+net/core/dev.c napi_hash_add 4693 hlist_add_head_rcu(&napi->napi_hash_node,
+net/decnet/dn_table.c dn_fib_get_table 873 hlist_add_head_rcu(&t->hlist, &dn_fib_table_hash[h]);
+net/ipv4/devinet.c inet_hash_insert 122 hlist_add_head_rcu(&ifa->hash, &inet_addr_lst[hash]);
+net/ipv4/fib_frontend.c fib4_rules_init 65 hlist_add_head_rcu(&local_table->tb_hlist,
+net/ipv4/fib_frontend.c fib4_rules_init 67 hlist_add_head_rcu(&main_table->tb_hlist,
+net/ipv4/fib_frontend.c fib_new_table 110 hlist_add_head_rcu(&tb->tb_hlist, &net->ipv4.fib_table_hash[h]);
+net/ipv4/fib_trie.c fib_insert_alias 1052 hlist_add_before_rcu(&new->fa_list, &fa->fa_list);
+net/ipv4/fib_trie.c fib_insert_alias 1066 hlist_add_behind_rcu(&new->fa_list, &fa->fa_list);
+net/ipv4/fib_trie.c fib_insert_alias 1068 hlist_add_head_rcu(&new->fa_list, &l->leaf);
+net/ipv4/ip_tunnel.c ip_tunnel_add 269 hlist_add_head_rcu(&t->hash_node, head);
+net/ipv4/tcp_ipv4.c tcp_md5_do_add 950 hlist_add_head_rcu(&key->node, &md5sig->head);
+net/ipv6/addrconf.c ipv6_add_addr 976 hlist_add_head_rcu(&ifa->addr_lst, &inet6_addr_lst[hash]);
+net/ipv6/addrlabel.c __ip6addrlbl_add 267 hlist_add_before_rcu(&newp->list, &p->list);
+net/ipv6/addrlabel.c __ip6addrlbl_add 273 hlist_add_behind_rcu(&newp->list, &last->list);
+net/ipv6/addrlabel.c __ip6addrlbl_add 275 hlist_add_head_rcu(&newp->list, &ip6addrlbl_table.head);
+net/ipv6/ip6_fib.c fib6_link_table 209 hlist_add_head_rcu(&tb->tb6_hlist, &net->ipv6.fib_table_hash[h]);
+net/ipv6/xfrm6_tunnel.c __xfrm6_tunnel_alloc_spi 165 hlist_add_head_rcu(&x6spi->list_byspi, &xfrm6_tn->spi_byspi[index]);
+net/ipv6/xfrm6_tunnel.c __xfrm6_tunnel_alloc_spi 168 hlist_add_head_rcu(&x6spi->list_byaddr, &xfrm6_tn->spi_byaddr[index]);
+net/l2tp/l2tp_core.c l2tp_session_create 1814 hlist_add_head_rcu(&session->global_hlist,
+net/mac80211/mesh_pathtbl.c mesh_path_add_gate 469 hlist_add_head_rcu(&new_gate->list, tbl->known_gates);
+net/mac80211/mesh_pathtbl.c mesh_path_add 586 hlist_add_head_rcu(&new_node->list, bucket);
+net/mac80211/mesh_pathtbl.c mpp_path_add 715 hlist_add_head_rcu(&new_node->list, bucket);
+net/netfilter/ipvs/ip_vs_conn.c ip_vs_conn_hash 184 hlist_add_head_rcu(&cp->c_list, &ip_vs_conn_tab[hash]);
+net/netfilter/ipvs/ip_vs_ctl.c ip_vs_svc_hash 314 hlist_add_head_rcu(&svc->s_list, &ip_vs_svc_table[hash]);
+net/netfilter/ipvs/ip_vs_ctl.c ip_vs_svc_hash 320 hlist_add_head_rcu(&svc->f_list, &ip_vs_svc_fwm_table[hash]);
+net/netfilter/ipvs/ip_vs_ctl.c ip_vs_rs_hash 528 hlist_add_head_rcu(&dest->d_list, &ipvs->rs_table[hash]);
+net/netfilter/ipvs/ip_vs_lblc.c ip_vs_lblc_hash 175 hlist_add_head_rcu(&en->list, &tbl->bucket[hash]);
+net/netfilter/ipvs/ip_vs_lblcr.c ip_vs_lblcr_hash 338 hlist_add_head_rcu(&en->list, &tbl->bucket[hash]);
+net/netfilter/nf_conntrack_expect.c nf_ct_expect_insert 353 hlist_add_head_rcu(&exp->hnode, &net->ct.expect_hash[h]);
+net/netfilter/nf_conntrack_helper.c nf_conntrack_helper_register 381 hlist_add_head_rcu(&me->hnode, &nf_ct_helper_hash[h]);
+net/netfilter/nf_nat_core.c nf_nat_setup_info 433 hlist_add_head_rcu(&nat->bysource,
+net/netfilter/nfnetlink_log.c instance_create 198 hlist_add_head_rcu(&inst->hlist,
+net/netfilter/nfnetlink_queue.c instance_create 145 hlist_add_head_rcu(&inst->hlist, &q->instance_table[h]);
+net/netfilter/xt_hashlimit.c dsthash_alloc_init 195 hlist_add_head_rcu(&ent->node, &ht->hash[hash_dst(ht, dst)]);
+net/openvswitch/datapath.c new_vport 239 hlist_add_head_rcu(&vport->dp_hash_node, head);
+net/openvswitch/flow_table.c table_instance_insert 331 hlist_add_head_rcu(&flow->flow_table.node[ti->node_ver], head);
+net/openvswitch/flow_table.c ufid_table_instance_insert 340 hlist_add_head_rcu(&flow->ufid_table.node[ti->node_ver], head);
+net/openvswitch/vport.c ovs_vport_add 220 hlist_add_head_rcu(&vport->hash_node, bucket);
+net/rds/connection.c __rds_conn_create 243 hlist_add_head_rcu(&conn->c_hash_node, head);
+net/sunrpc/auth.c rpcauth_lookup_credcache 599 hlist_add_head_rcu(&cred->cr_hash, &cache->hashtable[nr]);
+net/tipc/name_table.c tipc_nameseq_create 172 hlist_add_head_rcu(&nseq->ns_list, seq_head);
+net/tipc/node.c tipc_node_create 171 hlist_add_head_rcu(&n_ptr->hash, &tn->node_htable[tipc_hashfn(addr)]);
+security/integrity/ima/ima_queue.c ima_add_digest_entry 88 hlist_add_head_rcu(&qe->hnext, &ima_htable.queue[key]);
+security/selinux/avc.c avc_insert 697 hlist_add_head_rcu(&node->list, head);
+security/smack/smack_access.c smk_insert_entry 419 hlist_add_head_rcu(&skp->smk_hashed, head);
+virt/kvm/eventfd.c kvm_register_irq_ack_notifier 489 hlist_add_head_rcu(&kian->link, &kvm->irq_ack_notifier_list);
+END
