@@ -1,0 +1,26 @@
+list_add_rcu:
+&ei->i_prealloc_list 369
+elem->list.prev 185
+&cancel_list 4
+head 1
+
+list_add_tail_rcu:
+&init_task.tasks 1394
+&tfile->f_ep_links 964
+&cgroup_parent(cgrp)->self.children 38
+&list->list 16
+&net->dev_base_head 10
+&net_namespace_list 5
+&net->rules_ops 5
+&evdev->client_list 4
+
+hlist_add_head_rcu:
+&link->pid->tasks[type] 8325
+head 108
+dev->name) 10
+&net->ipv4.fib_table_hash[h] 6
+&net->ipv6.fib_table_hash[h] 5
+&l->leaf 4
+&inet_addr_lst[hash] 4
+&inet6_addr_lst[hash] 4
+mp->m_dentry) 2
