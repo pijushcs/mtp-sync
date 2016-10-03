@@ -10,7 +10,7 @@ Email: pijush@cse.iitb.ac.in
 GENERAL
 =====================
 
-To study the level of contention, this test tries to find the no of cycles a writer wastes inorder to get hold of the lock.
+This test tries to find the no of cycles a writer wastes inorder to get hold of the lock.
 The datastructure used is the tfile->f_ep_links linked list under the fs subsystem. 
 The system was running at a fixed frequency of 2800MHz.
 
